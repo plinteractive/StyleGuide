@@ -1,0 +1,940 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>StyleGuide</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<SCRIPT type=text/javascript>
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+console.info('There will be 404 errors because it is not realizing that it does not need to make the request for items in <pre> tags');
+</SCRIPT>
+<style></style>
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="http://plinteractive.github.io/swg_wcm_project/css/build.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="main">
+  <h1>StyleGuide (UI components)</h1>
+  <p>The following guide is designed to address developers handling the Front End/UI. The format is presented as <code>[TITLE] [NOTES] [IMAGE/LIVE SAMPLE] [SNIPPET]</code>. When you hover over a line, a green box will appear in the upper right. This allows you to open the snippet in a new window, copy to clipboard, or print it.</p>
+  <p>Elements are hilighted to identify attributes, values, etc. They are also line-numbered for easier long-term reference.</p>
+  <p><strong>DISCLAIMER</strong>: This is a living document, and should be updated as things migrate to production. All items are taken from the development environment and may change.</p>
+  <hr noshade>
+  <h2>Bootstrap grid examples</h2>
+  <p class="notes">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+  <h3>Three equal columns</h3>
+  <p class="notes">Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+  <div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+</pre>
+  <h3>Three unequal columns</h3>
+  <p class="notes">Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+  <div class="row">
+    <div class="col-md-3">.col-md-3</div>
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-3">.col-md-3</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-md-3">.col-md-3</div>
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-3">.col-md-3</div>
+  </div>
+</pre>
+  <h3>Two columns</h3>
+  <p class="notes">Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+  <div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+</pre>
+  <h3>Full width, single column</h3>
+  <p class="notes">No grid classes are necessary for full-width elements.</p>
+  <h3>Two columns with two nested columns</h3>
+  <p class="notes">Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column. At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+  <div class="row">
+    <div class="col-md-8"> .col-md-8
+      <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+      </div>
+    </div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-md-8"> .col-md-8
+      <div class="row">
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-6">.col-md-6</div>
+      </div>
+    </div>
+    <div class="col-md-4">.col-md-4</div>
+  </div>
+</pre>
+  <h3>Mixed: mobile and desktop</h3>
+  <p class="notes">The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts. Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+  <div class="row">
+    <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">.col-xs-6</div>
+    <div class="col-xs-6">.col-xs-6</div>
+  </div>
+  <pre class="brush: html;"><div class="row">
+    <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">.col-xs-6</div>
+    <div class="col-xs-6">.col-xs-6</div>
+  </div>
+</pre>
+  <h3>Mixed: mobile, tablet, and desktop</h3>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+    <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
+    <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+    <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
+  </div>
+</pre>
+  <h3>Column clearing</h3>
+  <p class="notes"><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
+  <div class="row">
+    <div class="col-xs-6 col-sm-3"> .col-xs-6 .col-sm-3 <br>
+      Resize your viewport or check it out on your phone for an example. </div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <!-- Add the extra clearfix for only the required viewport -->
+    <div class="clearfix visible-xs"></div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  </div>
+  <pre class="brush:html;"><div class="row">
+    <div class="col-xs-6 col-sm-3"> .col-xs-6 .col-sm-3 <br>
+      Resize your viewport or check it out on your phone for an example. </div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <!-- Add the extra clearfix for only the required viewport -->
+    <div class="clearfix visible-xs"></div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+    <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+  </div>
+</pre>
+  <h3>Offset, push, and pull resets</h3>
+  <p class="notes">Reset offsets, pushes, and pulls at specific breakpoints.</p>
+  <div class="row">
+    <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+    <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+    <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+  </div>
+  <pre class="brush:html;">  <div class="row">
+    <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+    <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+    <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
+  </div>
+</pre>
+  <hr noshade>
+  <h2>Structural Elements</h2>
+  <h3>Yellow Row</h3>
+  <p class="notes">The following are rows that other columns and contents will fit in. The IDs contextually identify their common usage. <code>center-warning-container</code> is used often for warnings or sensative information. <code>safety-and-planning</code> is often used for safety and planning. <code>center-why-and-saving</code> is the most common and is also used for things like "why" and "savings".</p>
+  <img src="row yellow.jpg" />
+  <pre class="brush: html;">
+  <div id="center-warning-container" class="ng-scope">
+  	<div class="container">
+    	<div class="row">
+      		<div class="col-lg-6 col-md-6 black-border-left hidden-sm hidden-xs"></div>
+      	</div>
+    </div>
+  </div>
+ </pre>
+  <h3>White Row</h3>
+  <img src="row white.jpg" />
+  <pre class="brush: html;">
+    <div id="safety-and-planning" class="ng-scope">
+  	<div class="container">
+    	<div class="row">
+      		<div class="col-lg-6 col-md-6 black-border-left hidden-sm hidden-xs"></div>
+      	</div>
+    </div>
+  </div>
+ </pre>
+  <h3>Grey Row</h3>
+  <img src="row grey.jpg" />
+  <pre class="brush: html;">
+    <div id="center-why-and-savings" class="ng-scope">
+  	<div class="container">
+    	<div class="row">
+      		<div class="col-lg-6 col-md-6 black-border-left hidden-sm hidden-xs"></div>
+      	</div>
+    </div>
+  </div>
+ </pre>
+ <h3>Blue Polkadot Row</h3>
+ <p class="notes">This row has a repeating background that repeats after 987 pixels of height.</p>
+  <img src="row blue polka.jpg" />
+  <pre class="brush: html;">
+<div id="safety-snow-precaution" class="padded-module ng-scope" in-view="becameInView(&quot;safety-snow-precaution&quot;)">
+</div>
+ </pre>
+  <h3>Brown Pipes Row</h3>
+  <p class="notes">This row has a repeating background that repeats after 274 pixels of height.</p>
+  <img src="row pipes.jpg" />
+  <pre class="brush: html;">
+<div id="safety-customer-buried-piping" class="padded-module ng-scope" in-view="becameInView(&quot;safety-snow-precaution&quot;)">
+</div>
+ </pre>
+   <h3>Brown Lightning Row</h3>
+  <p class="notes">This row has a repeating background that repeats after 101 pixels of height.</p>
+  <img src="row lightning.jpg" />
+  <pre class="brush: html;">
+<div id="safety-earthquakes" class="padded-module ng-scope" in-view="becameInView(&quot;safety-snow-precaution&quot;)">
+</div>
+ </pre>
+    <h3>Dark Blue Row</h3>
+  <img src="row blue dark.jpg" />
+  <pre class="brush: html;">
+<div id="safety-work" class="padded-module ng-scope" in-view="becameInView(&quot;safety-snow-precaution&quot;)">
+</div>
+ </pre>
+<h3>Manhole Separator Row</h3>
+  <img src="row manhole.jpg" />
+  <pre class="brush: html;">
+<div id="safety-manhole" class="padded-module ng-scope" in-view="becameInView(&quot;safety-snow-precaution&quot;)">
+</div>
+ </pre> 
+  <h3>Black Icon Headers</h3>
+  <p class="notes">This is the use of an icon closely bound visually to the text it precedes.</p>
+  <img src="icon info safety.jpg" />
+  <pre class="brush: html;">
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 phone-icon-text">
+    <h2 class="uppercase small-header black-text">Call 911</h2>
+</div>
+</pre>
+  <h3>Popover tag</h3>
+  <p class="notes">This is a visual sprite used instead of a traditional header.</p>
+  <img src="popover tooltip.jpg" />
+  <pre class="brush: html;">
+<div class="static-popover-style-bg ng-isolate-scope" static-popover="Safety Recommendations">
+  <div class="static-popover-style-bg-top">
+    <h2 ng-bind="title" class="ng-binding">Safety Recommendations</h2>
+  </div>
+  <div class="static-popover-style-bg-bottom">
+    <i class="glyphicon glyphicon-play"></i>
+  </div>
+</div>
+</pre>
+  <hr noshade>
+  <h2>Button Groups</h2>
+  <h3>Button with Icon</h3>
+  <img src="icon button marquee.jpg">
+  <pre class="brush: html;">
+<button type="button" class="btn btn-default btn-alt btn-header-clock">
+	Start, Stop or Move Services
+</button>
+</pre>
+  <h3>Buttons (default size)</h3>
+  <div class="striped">
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+  </div>
+  <pre class="brush: html;">
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+  </pre>
+  <h3>Ghost button/default button (size:Large with additional shadow behavior)</h3>
+  <p class="notes">When using the default button over an image, we have added a shadow with the <code>btn-shadow</code> class not to give a three dimensional effect, but a subtle separation from the background.</p>
+  <img src="button.jpg" />
+  <pre class="brush: html;">
+<button type="button" class="btn btn-default btn-lg btn-shadow">
+	Learn Why
+</button>
+</pre>
+  <h3>Button Size Examples</h3>
+  <p class="notes">The following use the classes <code>btn-lg</code> <code>btn-md</code> <code>btn-sm</code> <code>btn-xs</code> and the default behavior.</p>
+  <button type="button" class="btn btn-success btn-lg">Success</button>
+  <button type="button" class="btn btn-success btn-md">Success</button>
+  <button type="button" class="btn btn-success btn-sm">Success</button>
+  <button type="button" class="btn btn-success btn-xs">Success</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <pre class="brush: html;">
+  <button type="button" class="btn btn-success btn-lg">Success</button>
+  <button type="button" class="btn btn-success btn-md">Success</button>
+  <button type="button" class="btn btn-success btn-sm">Success</button> 
+  <button type="button" class="btn btn-success btn-xs">Success</button>
+  <button type="button" class="btn btn-success">Success</button>
+  </pre>
+  <hr noshade>
+  <h2>Form Elements</h2>
+  <h3>Input</h3>
+  <p class="notes">Any element that is going to be used in a responsive form should have the following class <code>form-control</code>. This will allow the element to become block-level and exist on a line all by itself unless it gets wrapped with another div.</p>
+  <img src="input text.jpg" />
+  <pre class="brush: html;">
+<input type="email" class="form-control" name="email" placeholder="Email Address">
+</pre>
+  <h3>Input (Search)</h3>
+  <p class="notes">This is a search field that is used in the header. It combines a glyphicon and a custom class to wrap the whole item <code>fancy-search</code>. <code>form-group</code> is used to prepend the form element itself with an icon and will look seamless. The use of Angular's ng-click though <code>ng-click="$event.stopPropagation()"</code> binds the click to Angular instead of a cumbersome traditional form submit button so the user can hit enter on the keyboard.</p>
+  <img src="input searchbox.jpg" />
+  <pre class="brush: html;">
+<div class="form-group fancy-search">
+	<i class="glyphicon glyphicon-search input-search-icon-bg"></i>
+	<input type="text" class="form-control search no-extras" placeholder="Search" ng-click="$event.stopPropagation()">
+</div>
+</pre>
+  <h3>H2 - Small Header (with orange text)</h3>
+  <p class="notes">unlike the popover, this is more for use inline with content where visual treatments would be disctracting.</p>
+  <img src="H2 small-header-orange.jpg" />
+  <pre class="brush: html;">
+<h2 class="small-header orange-text uppercase">
+	Not Registered Yet?
+</h2>
+</pre>
+  <h3>H4 - Small Header (with orange text)</h3>
+  <p class="notes">Similar to the H2 small header, this element is just a smaller representation.</p>
+  <img src="H4 small-header-orange.jpg" />
+  <pre class="brush: html;">
+<h4 class="small-header orange-text uppercase">News &amp; Events</h4>
+</pre>
+  <h3>Links (with icon)</h3>
+  <p class="notes">This example uses both an icon to denote the filetype, but also caret.</p>
+  <img src="link-icon.jpg">
+  <pre class="brush: html;">
+<a ng-href="" title="View example of a bill" class="green-text">
+	<i class="icon-pdf icon-pdf-bg-left"></i> 
+		View example of a bill
+	<i class="glyphicon glyphicon-chevron-right glyphicon-chevron-small"></i>
+</a>  
+  </pre>
+  <h3>Location block</h3>
+  <p class="notes">These are blocks of content used to show an image of the area served, followed by the address, a telephone line and a link to driving directions. The link ULR is TBD.</p>
+  <img src="location block.jpg" />
+  <pre class="brush: html;">
+<div class="row">
+  <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4"> <img src="images/shared/nevada_green.png" alt="Las Vegas Office"> </div>
+  <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
+    <p class="white-text"> Southwest Gas Corporation<br>
+      5241 Spring Mountain Rd.<br>
+      Las Vegas, NV 89150-0002<br>
+      (702) 876-7011<br>
+    </p>
+    <p><a href="#" title="Driving Directions" class="green-text">Driving Directions <i class="glyphicon glyphicon-chevron-right glyphicon-chevron-small"></i></a></p>
+  </div>
+</div>
+</pre>
+  <h3>Hero (standard)</h3>
+  <p class="notes">This is a section landing page hero image. there is an example below of overlaying text.</p>
+  <img src="hero.jpg" width="752" height="210">
+  <pre class="brush: html;">
+<div id="contact-hero" class="ng-scope">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="white-text ar">Contact Us</h1>
+      </div>
+    </div>
+    <!--separate row for mobile flow-->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aaena suisimod bib edinam laoreet.</p>
+      </div>
+    </div>
+  </div>
+</div>  
+  </pre>
+  <h3>Well - Grey</h3>
+  <p class="notes">This is a generic well used on the site with sample content for blocking.</p>
+  <img src="well-grey.jpg">
+  <pre class="brush: html;">
+<div class="row gray-bg-alt">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h4 class="uppercase orange-text small-header">Request Services</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p class="pad-top-and-bottom">To start, stop or move service, lorem ipsum dolor sit amet con adspicing der nonunny. Consecteteur sed donol elit.</p>
+      </div>
+    </div>
+    <div class="row">
+    <!--calls to action using hidden-sm/md for mobile/desk views-->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <button type="button" class="btn btn-default btn-alt btn-alt-max-270 hidden-sm hidden-xs btn-header-clock"> Start, Stop or Move Services </button>
+        <button type="button" class="btn btn-default btn-alt btn-header-clock hidden-lg hidden-md"> Start, Stop or Move Services </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p class="pad-top-and-bottom">You may also call Customer Assistance at 1-877-860-6020 Mon-Fri 8am-5pm PST, excluding holidays. (Hearing impaired: 711)</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </pre>
+  <h3>Info Block w/ Icon</h3>
+  <p class="notes">These icon-driven information blocks will often be used on their own without a call to action.</p>
+  <img src="info block with icon.jpg">
+  <pre class="brush: html;">
+<div class="row xsmall-padded-module">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <p class="centered">
+                  <img src="images/natural-gas-products/home_circle_green.png" alt="Smell">
+                </p>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="small-header uppercase black-text no-margin">It's Comfortable</h2>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p class="spaced">
+                      Natural gas furnaces deliver warm air without draftiness 
+                      associated with an electric heat pump.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>  </pre>
+  <h3>Info Block</h3>
+  <p class="notes">This is an often used information block using an <code>H4</code> with the class <code>orange-text</code>.</p>
+  <img src="info block.jpg">
+  <pre class="brush: html;">
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h4 class="uppercase orange-text small-header">Account or Billing Questions</h4>
+  </div>
+</div>
+<!--separate row for title and content for mobile compatibility-->
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <p> Contact Customer Assistance<br>
+      1-877-860-6020<br>
+      Mon-Fri 8am-5pm PST, excluding holidays.<br>
+      <span class="pad-top-minor">Hearing impaired: 711</span> </p>
+  </div>
+</div>
+  </pre>
+  <h2>Buckets</h2>
+  <p class="notes">These are buckets that are set up to reflow easily for mobile views. They are often used as a launching point to more specific content.</p>
+
+ 
+<h3>Third Boxes</h3>
+<p class="notes">These boxes are set up to be three wide inside a container. They are set to a fixed width/height to preserve content desktop through mobile.</p>
+  <img src="bucket.jpg">
+  <pre class="brush: html;">
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 white-bg bg-shadowed third-boxes">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="orange-text uppercase small-header">Get Special Offers</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="images/residential/tmp_istock.png" alt="Special Assistance Programs">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="spaced">
+              Special offers exist for new and current Southwest Gas customers. 
+              Explore current rebates and offers in your area.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 third-boxes-links">
+            <p class="spaced">
+              <a ng-href="" title="See rebates and offers" class="green-text pnsb">
+                See rebates and offers
+                <i class="glyphicon glyphicon-chevron-right glyphicon-chevron-small"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>  
+  </pre>
+  <h3>Half Boxes</h3>
+<p class="notes">These boxes are set up to be two wide inside a container. They are set to a fixed width/height to preserve content desktop through mobile.</p>
+  <img src="half-boxes.jpg">
+  <pre class="brush: html;">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 white-bg half-boxes">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="small-header uppercase orange-text">Heating</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <img src="images/natural-gas-products/fpo_heater.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="spaced">
+              The value of a gas heater is in the numbers. Costing less than other 
+              major energy sources, natural gas is the smart solution for your heating budget.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p>
+              <a ng-href="" title="More Info" class="green-text pnsb">
+                More Info
+                <i class="glyphicon glyphicon-chevron-right glyphicon-chevron-small"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>  </pre>
+  
+  <h3>Right Rail - Video (INCOMPLETE)</h3>
+  <p class="notes">This section does not have the JavaScript or references to the resource defined at the time of writing this.</p>
+  <img src="rtrail-video.jpg">
+  <pre class="brush: html;">
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <h4 class="uppercase small-header orange-text">What would you do if you had extra time?</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="video-preview-block go-paperless-video-block">
+        <div class="video-play-btn"> <a ng-href="" title="Play Video"> <img src="images/shared/play_btn.png" alt="Play Video"> </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p class="spaced"> Go Paperless today! And have more time for the things you love. [2:39] </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <p class="spaced inline-block"> <a ng-href="" title="Visit Go paperless video" class="green-text"> <i class="icon-video icon-video-bg-left"></i> Go paperless video <i class="glyphicon glyphicon-chevron-right glyphicon-chevron-small"></i> </a> </p>
+    </div>
+  </div>
+</div>
+</pre>
+  <h3>Alerts</h3>
+  <p class="notes">Below are inline alert boxes you can use. They all start with the class and role of <code>alert</code> but take the additional classes of <code>alert-success</code>, <code>alert-info</code>, <code>alert-warning</code> or <code>alert-danger</code> to change the color palette.</p>
+  <div class="alert alert-success" role="alert"> <strong>Well done!</strong> You successfully read this important alert message. </div>
+  <div class="alert alert-info" role="alert"> <strong>Heads up!</strong> This alert needs your attention, but it's not super important. </div>
+  <div class="alert alert-warning" role="alert"> <strong>Warning!</strong> Best check yo self, you're not looking too good. </div>
+  <div class="alert alert-danger" role="alert"> <strong>Oh snap!</strong> Change a few things up and try submitting again. </div>
+  <pre class="brush:html;"><div class="alert alert-success" role="alert">
+    <strong>Well done!</strong> You successfully read this important alert message.
+</div>
+<div class="alert alert-info" role="alert">
+    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div>
+<div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div>
+<div class="alert alert-danger" role="alert">
+	<strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div>
+</pre>
+<h2>Major global elements</h2>
+<h3>Footer</h3>
+<p class="notes">This element is bound to a template and Angular include controller. The template it calls is <code>footer.html</code> located inside the templates/ path. <ul class="notes"><li>The first piece of code calls Angular, and asks it to grab the footer.html file and insert it.</li><li>The second piece of code is the actual footer.html include file where all changes must be made.</li></ul></p>
+<img src="footer.jpg">
+<pre class="brush: html;">
+<div ng-include src="'templates/footer.html'"></div></pre>
+<pre class="brush: html;">
+
+<div id='footer' class='relative'>
+  <div class='tractor wow bounceInLeft animate' data-wow-duration='1.5s' data-wow-delay='2s'>
+    <img src='images/shared/tractor.png' />
+  </div>
+  <div class='call-before-you-dig wow bounceInUp animate' data-wow-duration='1.5s' data-wow-delay='3.5s'>
+    <img src='images/shared/call_flag.png' />
+  </div>
+  <div class='man-with-shovel'>
+    <img src='images/shared/man-with-shovel.png' />
+  </div>
+  <div class='pair-of-workers'>
+    <img src='images/shared/pair-of-workers.png' />
+  </div>
+  <div class='container'>
+    <div class='row footer-content'>
+      <div class='col-lg-12 col-md-12'>
+        <div class='row'>
+          <div class='col-lg-3 col-md-3 hidden-sm hidden-xs'>
+            <h4>Manage your account</h4>
+            <ul class='footer-general-list'>
+              <li>
+                <a ng-href='' title='Ways to Pay'>Ways to Pay</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Signup for AutoPay</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Go Paperless</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Start, Stop, Move Service</a>
+              </li>
+              <li>
+                <a ng-href='' title='Save Energy and Money'>Save Energy and Money</a>
+              </li>
+              <li>
+                <a ng-href='' title='Outage Map'>Outage Map</a>
+              </li>
+              <li>
+                <a ng-href='' title='FAQs'>FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <div class='col-lg-3 col-md-3 hidden-sm hidden-xs'>
+            <h4>Residential Services</h4>
+            <ul class='footer-general-list'>
+              <li>
+                <a ng-href='' title='Paying Your Bill'>Paying Your Bill</a>
+              </li>
+              <li>
+                <a ng-href='' title='Residential Rebates'>Residential Rebates</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Safety Resources</a>
+              </li>
+              <li>
+                <a ng-href='' title='Contractor Referrals'>Contractor Referrals</a>
+              </li>
+              <li>
+                <a ng-href='' title='Natural Gas Products'>Natural Gas Products</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Landlord Services</a>
+              </li>
+            </ul>
+          </div>
+          <div class='col-lg-3 col-md-3 hidden-sm hidden-xs'>
+            <h4>Business Services</h4>
+            <ul class='footer-general-list'>
+              <li>
+                <a ng-href='' title='Paying Your Bill'>Paying Your Bill</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Industrial Services</a>
+              </li>
+              <li>
+                <a ng-href='' title=''>Commercial Services</a>
+              </li>
+              <li>
+                <a ng-href='' title='Commercial Rebates'>Commercial Rebates</a>
+              </li>
+              <li>
+                <a ng-href='' title='Builders &amp; Developers'>Builders &amp; Developers</a>
+              </li>
+              <li>
+                <a ng-href='' title='Energy Calculators'>Energy Calculators</a>
+              </li>
+              <li>
+                <a ng-href='' title='Rates &amp; Regulations'>Rates &amp; Regulations</a>
+              </li>
+            </ul>
+          </div>
+          <div class='hidden-lg hidden-md col-sm-6 col-xs-6'>
+            <ul class='footer-general-list'>
+              <li>
+                <a ng-href='' title='About Southwest Gas'>About Southwest Gas</a>
+              </li>
+              <li>
+                <a ng-href='' title='Contact Us'>Contact Us</a>
+              </li>
+              <li>
+                <a ng-href='' title='Employment'>Employment</a>
+              </li>
+              <li>
+                <a ng-href='' title='Investor Relations'>Investor Relations</a>
+              </li>
+              <li>
+                <a ng-href='' title='Privacy Policy'>Privacy Policy</a>
+              </li>
+              <li>
+                <a ng-href='' title='Southwest Gas Consulting'>Site Map</a>
+              </li>
+            </ul>
+            <ul class='footer-mobile-copyright'>
+              <p class='footer-gray-text'>&copy;2014 Southwest Gas Corporation. All rights reserved.</p>
+            </ul>
+          </div>
+          <div class='col-lg-3 col-md-3 col-sm-6 col-xs-6'>
+            <ul class='footer-mobile-logo hidden-lg hidden-md'>
+              <li>
+                <img src='images/shared/logo_footer.png' alt='Southwest Gas' />
+              </li>
+            </ul>
+            <h4 class='footer-logo-container hidden-sm hidden-xs'>
+              <img src='images/shared/logo_footer.png' alt='Southwest Gas' />
+            </h4>
+            <ul class='footer-contact'>
+              <li>Customer Service</li>
+              <li>(555) 555-5555</li>
+              <li>Monday-Friday 8am-6pm</li>
+            </ul>
+            <ul class='footer-social clearfix'>
+              <li>
+                <a ng-href='' title='Facebook'>
+                  <img src='images/shared/facebook_footer.png' alt='Facebook' />
+                </a>
+              </li>
+              <li>
+                <a ng-href='' title='Twitter'>
+                  <img src='images/shared/twitter_footer.png' alt='Twitter' />
+                </a>
+              </li>
+              <li>
+                <a ng-href='' title='LinkedIn'>
+                  <img src='images/shared/linkedin_footer.png' alt='LinkedIn' />
+                </a>
+              </li>
+            </ul>
+            <ul class='footer-suspect-gas-leak'>
+              <li>
+                Suspect a natural gas leak? Call 911 and Southwest Gas immediately at (877) 860-6020
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class='row footer-content-bottom hidden-sm- hidden-xs'>
+      <div class='col-lg-12 col-md-12'>
+        <hr />
+      </div>
+    </div>
+    <div class='row footer-content-bottom hidden-sm hidden-xs'>
+      <div class='col-lg-10 col-md-10 col-lg-offset-2 col-md-offset-2'>
+        <ul class='final-contact-links clearfix'>
+          <li>
+            <a ng-href='' title='About Southwest Gas'>About Southwest Gas</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a ng-href='' title='Contact Us'>Contact Us</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a ng-href='' title='Employment'>Employment</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a ng-href='' title='Investor Relations'>Investor Relations</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a ng-href='' title='Privacy Policy'>Privacy Policy</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a ng-href='' title='Site Map'>Site Map</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class='row footer-content-bottom footer-copyright hidden-sm hidden-xs'>
+      <div class='col-lg-12 col-md-12'>
+        <p class='centered'>&copy;2014 Southwest Gas Corporation. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</pre>
+<h3>Navigation - multi level</h3>
+<p class="notes">This is the persistent "sticky" navigation bar that, as you scroll, it will stay at the top of the visible area of the browser's viewport. This version contains drop downs for multiple levels. The use of Angular and the controller <code>ng-controller='StickyNavController'</code> dictates the functionality and should not need to be modified directly.</p>
+<img src="nav sticky multilevel.jpg" />
+<pre class="brush: html;">
+<div class='gray-bg sticky-menu' ng-controller='StickyNavController'>
+  <div class='container hidden-xs'>
+    <div class='row'>
+      <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+        <header class='navbar navbar-default navbar-default-override' role='banner'>
+          <nav role='navigation'>
+            <ul class='nav navbar-nav pull-left'>
+              <li class='brand'>
+                <h4 class='pnsb'>Residential</h4>
+              </li>
+            </ul>
+            <ul class='nav navbar-nav pull-right'>
+              <li class='dropdown' dropdown>
+                <a ng-href='' class='dropdown-toggle' title='My Account' dropdown-toggle>
+                  My Account <i class='glyphicon glyphicon-chevron-down'></i>
+                </a>
+                <ul class='dropdown-menu' role='menu'>
+                  <li><a ng-href='' title='Action'>Action</a></li>
+                </ul>
+              </li>
+              <li class='nav-border-right'></li>
+              <li class='dropdown' dropdown>
+                <a ng-href='' class='dropdown-toggle' title='Natural Gas Products' dropdown-toggle>
+                  Natural Gas Products <i class='glyphicon glyphicon-chevron-down'></i>
+                </a>
+                <ul class='dropdown-menu' role='menu'>
+                  <li><a href='' title=''>Action</a></li>
+                  <li><a href='' title=''>Another action</a></li>
+                </ul>
+              </li>
+              <li class='nav-border-right'></li>
+              <li>
+                <a ng-href='' class='dropdown-toggle' title='Save Money &amp; Energy'>
+                  Save Money &amp; Energy
+                </a>
+              </li>
+              <li class='nav-border-right'></li>
+              <li>
+                <a ng-href='' class='dropdown-toggle' title='Special Programs &amp; Assistance'>
+                  Special Programs &amp; Assistance
+                </a>
+              </li>
+              <li class='nav-border-right'></li>
+              <li>
+                <a ng-href='' class='dropdown-toggle' title='Resources'>
+                  Resources
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+  </div>
+  <div class='container hidden-lg hidden-md hidden-sm'>
+    <div class='row'>
+      <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+        <select name='sticky_select' id='sticky_select' ng-model='sticky_select' ng-change='goTo(sticky_select)' ng-init='sticky_select = sticky_select[0]'>
+          <option value='_default_'>Navigation</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+          <option value='/residential'>Residential</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+</pre>
+<h3>Navigation - Residential</h3>
+<p class="notes">This is a persistent navigation bar that, when scrolled, will stick to the top of the viewport. The code resides in the individual files themselves. <code>natural-gas-products.html</code>, <code>residential.html</code> and <code>safety.html</code>. This is to support to possibility that these sections would get special treatment. These menus will have the attribute <code>sticky</code> and you will notice the ID will say something like <code>residential-menu</code> for the content.</p>
+<img src="sticky.jpg">
+<pre class="brush:html;">
+<div id='residential-menu' sticky class='gray-bg sticky-menu'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-12 col-lg-md col-lg-sm col-lg-xs'>
+        <header class='navbar navbar-default navbar-default-override' role='banner'>
+          <nav role='navigation'>
+            <ul class='nav navbar-nav'>
+              <li class='brand'>
+                <h4 class='pnsb'>Residential</h4>
+              </li>
+              <li class='nav-border-right'></li>
+              <li><a ng-href='' title='Bills &amp; Payments'>Bills &amp; Payments</a></li>
+              <li class='nav-border-right'></li>
+              <li><a ng-href='' title='Natural Gas Products'>Natural Gas Products</a></li>
+              <li class='nav-border-right'></li>
+              <li><a ng-href='' title='Save Money &amp; Energy'>Save Money &amp; Energy</a></li>
+              <li class='nav-border-right'></li>
+              <li><a ng-href='' title='Special Programs &amp; Assistance'>Special Programs &amp; Assistance</a></li>
+              <li class='nav-border-right'></li>
+              <li><a ng-href='' title='Resources'>Resources</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+  </div>
+</div>
+</pre>
+</div>
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shCore.js"></SCRIPT> 
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shBrushXml.js"></SCRIPT> 
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shBrushJScript.js"></SCRIPT> 
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shBrushCss.js"></SCRIPT> 
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shBrushPlain.js"></SCRIPT> 
+<SCRIPT type=text/javascript src="http://dev.itssobig.com/cheat/shBrushSql.js"></SCRIPT> 
+<SCRIPT type=text/javascript>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var themecssurl = "http://dev.itssobig.com/cheat/shThemeDefault.css";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.getElementsByTagName("head")[0].appendChild(themecss);
+	})();
+	SyntaxHighlighter.config.clipboardSwf = 'http://dev.itssobig.com/cheat/clipboard.swf';
+	SyntaxHighlighter.config.strings.expandSource = 'show source';
+	SyntaxHighlighter.config.strings.viewSource = 'view source';
+	SyntaxHighlighter.config.strings.copyToClipboard = 'copy to clipboard';
+	SyntaxHighlighter.config.strings.copyToClipboardConfirmation = 'The code is in your clipboard now';
+	SyntaxHighlighter.config.strings.print = 'print';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.all();
+</SCRIPT>
+</body>
+</html>

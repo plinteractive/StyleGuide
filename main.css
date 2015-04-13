@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* CSS Document */
+
+div {font: 16px 'PT Sans', Arial, sans-serif;}
+img {border:1px solid #e4e4e4;box-shadow:1px 1px 3px #666}
+code {font-size:12px}
+.notes {background-color:rgb(252, 252, 170);padding:5px}
+#main>hr {
+	color: red;
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: inset;
+	border-width: 1px;
+	background-color: red;
+	border-color: red
+}
+#main>.row div { color:#000;border:1px solid currentColor; background-color:#e4e4e4}
+#main>.row {margin:2px}
+#main>h1 {color:navy}
+#main>h2 {color:blue}
+#main>h3 {color:purple}
+#main>h1, #main>h2, #main>h3 {text-shadow:1px 1px 0px #fff; text-transform:capitalize; font-weight:bold;}
+h3 {
+	font-size: 24px;
+}
+.syntaxhighlighter, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody {
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	outline: 0 !important;
+	background: none !important;
+	text-align: left !important;
+	float: none !important;
+	vertical-align: baseline !important;
+	position: static !important;
+	left: auto !important;
+	top: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	height: auto !important;
+	width: auto !important;
+	line-height: 1.3em !important;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+	font-weight: normal !important;
+	font-style: normal !important;
+	font-size: 12px !important;
+	min-height: inherit !important;
+	min-height: auto !important;
+	direction: ltr !important;
+	text-shadow: none !important;
+}
+.syntaxhighlighter {
+	width: 99% !important;
+	margin: 1em 0 1em 0 !important;
+	padding: 1px !important;
+	position: relative !important;
+}
+.syntaxhighlighter code {
+	display: inline !important;
+}
+.syntaxhighlighter .bold {
+	font-weight: bold !important;
+}
+.syntaxhighlighter .italic {
+	font-style: italic !important;
+}
+.syntaxhighlighter .line {
+}
+.syntaxhighlighter .no-wrap .line .content {
+	white-space: pre !important;
+}
+.syntaxhighlighter .line table {
+	border-collapse: collapse !important;
+}
+.syntaxhighlighter .line td {
+	vertical-align: top !important;
+}
+.syntaxhighlighter .line .number {
+	width: 3em !important;
+}
+.syntaxhighlighter .number {
+	border-right: 3px solid #6CE26C !important;
+}
+.syntaxhighlighter .line .number code {
+	width: 2.7em !important;
+	padding-right: .3em !important;
+	text-align: right !important;
+	display: block !important;
+}
+.syntaxhighlighter .line .content {
+	padding-left: .5em !important;
+}
+.syntaxhighlighter .line .spaces {
+}
+.syntaxhighlighter.nogutter .line .content {
+	border-left: none !important;
+}
+.syntaxhighlighter .bar {
+	display: none !important;
+}
+.syntaxhighlighter .bar.show {
+	display: block !important;
+}
+.syntaxhighlighter.collapsed .bar {
+	display: block !important;
+}
+.syntaxhighlighter.collapsed .lines {
+	display: none !important;
+}
+.syntaxhighlighter .lines.no-wrap {
+	overflow: auto !important;
+	overflow-y: hidden !important;
+}
+.syntaxhighlighter .toolbar {
+	position: absolute !important;
+	right: 0px !important;
+	top: 0px !important;
+	font-size: 1px !important;
+	padding: 8px 8px 8px 0 !important;
+}
+.syntaxhighlighter.collapsed .toolbar {
+	font-size: 80% !important;
+	padding: .2em 0 .5em .5em !important;
+	position: static !important;
+}
+.syntaxhighlighter .toolbar a.item, .syntaxhighlighter .toolbar .item {
+	display: block !important;
+	float: left !important;
+	margin-left: 8px !important;
+	background-repeat: no-repeat !important;
+	overflow: hidden !important;
+	text-indent: -5000px !important;
+}
+.syntaxhighlighter.collapsed .toolbar .item {
+	display: none !important;
+}
+.syntaxhighlighter.collapsed .toolbar .item.expandSource {
+	background-image: url(magnifier.png) !important;
+	display: inline !important;
+	text-indent: 0 !important;
+	width: auto !important;
+	float: none !important;
+	height: 16px !important;
+	padding-left: 20px !important;
+}
+.syntaxhighlighter .toolbar .item.viewSource {
+	background-image: url(http://dev.itssobig.com/cheat/page_white_code.png) !important;
+}
+.syntaxhighlighter .toolbar .item.printSource {
+	background-image: url(http://dev.itssobig.com/cheat/printer.png) !important;
+}
+.syntaxhighlighter .toolbar .item.copyToClipboard {
+	text-indent: 0 !important;
+	background: none !important;
+	overflow: visible !important;
+}
+.syntaxhighlighter .toolbar .item.about {
+	background-image: url(http://dev.itssobig.com/cheat/help.png) !important;
+}
+.syntaxhighlighter.printing, .syntaxhighlighter.printing .line.alt1 .content, .syntaxhighlighter.printing .line.alt2 .content, .syntaxhighlighter.printing .line.highlighted .number, .syntaxhighlighter.printing .line.highlighted.alt1 .content, .syntaxhighlighter.printing .line.highlighted.alt2 .content, {
+background:none !important;
+}
+.syntaxhighlighter.printing .line .number {
+	color: #bbb !important;
+}
+.syntaxhighlighter.printing .line .content {
+	color: #000 !important;
+}
+.syntaxhighlighter.printing .toolbar {
+	display: none !important;
+}
+.syntaxhighlighter.printing a {
+	text-decoration: none !important;
+}
+.syntaxhighlighter.printing .plain, .syntaxhighlighter.printing .plain a {
+	color: #000 !important;
+}
+.syntaxhighlighter.printing .comments, .syntaxhighlighter.printing .comments a {
+	color: #008200 !important;
+}
+.syntaxhighlighter.printing .string, .syntaxhighlighter.printing .string a {
+	color: blue !important;
+}
+.syntaxhighlighter.printing .keyword {
+	color: #069 !important;
+	font-weight: bold !important;
+}
+.syntaxhighlighter.printing .preprocessor {
+	color: gray !important;
+}
+.syntaxhighlighter.printing .variable {
+	color: #a70 !important;
+}
+.syntaxhighlighter.printing .value {
+	color: #090 !important;
+}
+.syntaxhighlighter.printing .functions {
+	color: #ff1493 !important;
+}
+.syntaxhighlighter.printing .constants {
+	color: #0066CC !important;
+}
+.syntaxhighlighter.printing .script {
+	font-weight: bold !important;
+}
+.syntaxhighlighter.printing .color1, .syntaxhighlighter.printing .color1 a {
+	color: #808080 !important;
+}
+.syntaxhighlighter.printing .color2, .syntaxhighlighter.printing .color2 a {
+	color: #ff1493 !important;
+}
+.syntaxhighlighter.printing .color3, .syntaxhighlighter.printing .color3 a {
+	color: red !important;
+}
+.syntaxhighlighter {
+	background-color: #fff !important;
+	border: 1px solid #E0E0E0 !important;
+	padding: 0 !important;
+}
+.syntaxhighlighter.nogutter {
+	border: none !important;
+}
+.syntaxhighlighter .line.highlighted .number {
+	color: black !important;
+}
+.syntaxhighlighter .line.highlighted.alt1, .syntaxhighlighter .line.highlighted.alt2 {
+	background-color: #e0e0e0 !important;
+}
+.syntaxhighlighter .line .number {
+	color: #666 !important;
+}
+.syntaxhighlighter .line .content {
+	border-left: 3px solid #ccc !important;
+	color: #000 !important;
+}
+.syntaxhighlighter.printing .line .content {
+	border: 0 !important;
+}
+.syntaxhighlighter .line.alt1 {
+	background-color: #fff !important;
+}
+.syntaxhighlighter .line.alt2 {
+	background-color: #F8F8F8 !important;
+}
+.syntaxhighlighter .toolbar {
+	background-color: #F8F8F8 !important;
+	border: #eee solid 1px !important;
+}
+.syntaxhighlighter .toolbar a {
+	color: #a0a0a0 !important;
+}
+.syntaxhighlighter .toolbar a:hover {
+	color: red !important;
+}
+.syntaxhighlighter .plain, .syntaxhighlighter .plain a {
+	color: #000 !important;
+}
+.syntaxhighlighter .comments, .syntaxhighlighter .comments a {
+	color: #008200 !important;
+}
+.syntaxhighlighter .string, .syntaxhighlighter .string a {
+	color: blue !important;
+}
+.syntaxhighlighter .keyword {
+	color: #069 !important;
+	font-weight: bold !important;
+}
+.syntaxhighlighter .preprocessor {
+	color: gray !important;
+}
+.syntaxhighlighter .variable {
+	color: #a70 !important;
+}
+.syntaxhighlighter .value {
+	color: #090 !important;
+}
+.syntaxhighlighter .functions {
+	color: #ff1493 !important;
+}
+.syntaxhighlighter .constants {
+	color: #0066CC !important;
+}
+.syntaxhighlighter .script {
+	background-color: yellow !important;
+}
+.syntaxhighlighter .color1, .syntaxhighlighter .color1 a {
+	color: #808080 !important;
+}
+.syntaxhighlighter .color2, .syntaxhighlighter .color2 a {
+	color: #ff1493 !important;
+
+}
+.syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
+	color: red !important;
+}
+.odd {
+	background-color: green
+}
+#main {
+	width: 1280px;
+	background: #f4f4f4;
+	margin: 0 auto;
+	padding:5px;
+	border:1px solid #666
+}
+@font-face {
+	font-family: ProximaNovaA-Thin;
+	src: url(fonts/2D0C37_0_0.eot);
+	src: url(fonts/2D0C37_0_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_0_0.woff2) format('woff2'), url(fonts/2D0C37_0_0.woff) format('woff'), url(fonts/2D0C37_0_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Thin;
+	src: url(fonts/2D0C37_1_0.eot);
+	src: url(fonts/2D0C37_1_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_1_0.woff2) format('woff2'), url(fonts/2D0C37_1_0.woff) format('woff'), url(fonts/2D0C37_1_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Extrabld;
+	src: url(fonts/2D0C37_2_0.eot);
+	src: url(fonts/2D0C37_2_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_2_0.woff2) format('woff2'), url(fonts/2D0C37_2_0.woff) format('woff'), url(fonts/2D0C37_2_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Extrabld;
+	src: url(fonts/2D0C37_3_0.eot);
+	src: url(fonts/2D0C37_3_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_3_0.woff2) format('woff2'), url(fonts/2D0C37_3_0.woff) format('woff'), url(fonts/2D0C37_3_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Bold;
+	src: url(fonts/2D0C37_4_0.eot);
+	src: url(fonts/2D0C37_4_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_4_0.woff2) format('woff2'), url(fonts/2D0C37_4_0.woff) format('woff'), url(fonts/2D0C37_4_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Regular;
+	src: url(fonts/2D0C37_5_0.eot);
+	src: url(fonts/2D0C37_5_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_5_0.woff2) format('woff2'), url(fonts/2D0C37_5_0.woff) format('woff'), url(fonts/2D0C37_5_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Semibold;
+	src: url(fonts/2D0C37_6_0.eot);
+	src: url(fonts/2D0C37_6_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_6_0.woff2) format('woff2'), url(fonts/2D0C37_6_0.woff) format('woff'), url(fonts/2D0C37_6_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Bold;
+	src: url(fonts/2D0C37_7_0.eot);
+	src: url(fonts/2D0C37_7_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_7_0.woff2) format('woff2'), url(fonts/2D0C37_7_0.woff) format('woff'), url(fonts/2D0C37_7_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Light;
+	src: url(fonts/2D0C37_8_0.eot);
+	src: url(fonts/2D0C37_8_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_8_0.woff2) format('woff2'), url(fonts/2D0C37_8_0.woff) format('woff'), url(fonts/2D0C37_8_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Semibold;
+	src: url(fonts/2D0C37_9_0.eot);
+	src: url(fonts/2D0C37_9_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_9_0.woff2) format('woff2'), url(fonts/2D0C37_9_0.woff) format('woff'), url(fonts/2D0C37_9_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Black;
+	src: url(fonts/2D0C37_A_0.eot);
+	src: url(fonts/2D0C37_A_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_A_0.woff2) format('woff2'), url(fonts/2D0C37_A_0.woff) format('woff'), url(fonts/2D0C37_A_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Regular;
+	src: url(fonts/2D0C37_B_0.eot);
+	src: url(fonts/2D0C37_B_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_B_0.woff2) format('woff2'), url(fonts/2D0C37_B_0.woff) format('woff'), url(fonts/2D0C37_B_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaA-Black;
+	src: url(fonts/2D0C37_C_0.eot);
+	src: url(fonts/2D0C37_C_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_C_0.woff2) format('woff2'), url(fonts/2D0C37_C_0.woff) format('woff'), url(fonts/2D0C37_C_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaS-Light;
+	src: url(fonts/2D0C37_D_0.eot);
+	src: url(fonts/2D0C37_D_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_D_0.woff2) format('woff2'), url(fonts/2D0C37_D_0.woff) format('woff'), url(fonts/2D0C37_D_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNovaT-Thin;
+	src: url(fonts/2D0C37_E_0.eot);
+	src: url(fonts/2D0C37_E_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_E_0.woff2) format('woff2'), url(fonts/2D0C37_E_0.woff) format('woff'), url(fonts/2D0C37_E_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Extrabld;
+	src: url(fonts/2D0C37_F_0.eot);
+	src: url(fonts/2D0C37_F_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_F_0.woff2) format('woff2'), url(fonts/2D0C37_F_0.woff) format('woff'), url(fonts/2D0C37_F_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Black;
+	src: url(fonts/2D0C37_10_0.eot);
+	src: url(fonts/2D0C37_10_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_10_0.woff2) format('woff2'), url(fonts/2D0C37_10_0.woff) format('woff'), url(fonts/2D0C37_10_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Light;
+	src: url(fonts/2D0C37_11_0.eot);
+	src: url(fonts/2D0C37_11_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_11_0.woff2) format('woff2'), url(fonts/2D0C37_11_0.woff) format('woff'), url(fonts/2D0C37_11_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Semibold;
+	src: url(fonts/2D0C37_12_0.eot);
+	src: url(fonts/2D0C37_12_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_12_0.woff2) format('woff2'), url(fonts/2D0C37_12_0.woff) format('woff'), url(fonts/2D0C37_12_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Regular;
+	src: url(fonts/2D0C37_13_0.eot);
+	src: url(fonts/2D0C37_13_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_13_0.woff2) format('woff2'), url(fonts/2D0C37_13_0.woff) format('woff'), url(fonts/2D0C37_13_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: ProximaNova-Bold;
+	src: url(fonts/2D0C37_14_0.eot);
+	src: url(fonts/2D0C37_14_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_14_0.woff2) format('woff2'), url(fonts/2D0C37_14_0.woff) format('woff'), url(fonts/2D0C37_14_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: Adelle-Bold;
+	src: url(fonts/2D0C37_15_0.eot);
+	src: url(fonts/2D0C37_15_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_15_0.woff2) format('woff2'), url(fonts/2D0C37_15_0.woff) format('woff'), url(fonts/2D0C37_15_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: Adelle-BoldItalic;
+	src: url(fonts/2D0C37_16_0.eot);
+	src: url(fonts/2D0C37_16_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_16_0.woff2) format('woff2'), url(fonts/2D0C37_16_0.woff) format('woff'), url(fonts/2D0C37_16_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: Adelle-Italic;
+	src: url(fonts/2D0C37_17_0.eot);
+	src: url(fonts/2D0C37_17_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_17_0.woff2) format('woff2'), url(fonts/2D0C37_17_0.woff) format('woff'), url(fonts/2D0C37_17_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: Adelle-Regular;
+	src: url(fonts/2D0C37_18_0.eot);
+	src: url(fonts/2D0C37_18_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_18_0.woff2) format('woff2'), url(fonts/2D0C37_18_0.woff) format('woff'), url(fonts/2D0C37_18_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: FFGoodHeadlineWebProCondBlack;
+	src: url(fonts/2D0C37_19_0.eot);
+	src: url(fonts/2D0C37_19_0.eot?#iefix) format('embedded-opentype'), url(fonts/2D0C37_19_0.woff2) format('woff2'), url(fonts/2D0C37_19_0.woff) format('woff'), url(fonts/2D0C37_19_0.ttf) format('truetype')
+}
+@font-face {
+	font-family: 'Glyphicons Halflings';
+	src: url(fonts/glyphicons-halflings-regular.eot);
+	src: url(fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(fonts/glyphicons-halflings-regular.woff2) format('woff2'), url(fonts/glyphicons-halflings-regular.woff) format('woff'), url(fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+}
+.striped {background: repeating-linear-gradient(
+  45deg,
+  #606,
+  #606 5px,
+  #465298 5px,
+  #465298 10px
+);padding:3px}
